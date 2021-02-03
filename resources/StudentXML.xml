@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<Students>
+	<Student>
+		<StudId>s111111111</StudId>
+		<Name>John Doe</Name>
+		<Address>123 Main St.</Address>
+		<Status>Freshman</Status>
+	</Student>
+	<Student>
+		<StudId>s222222222</StudId>
+		<Name>Mary Smith</Name>
+		<Address>145 Main St.</Address>
+		<Status>Junior </Status>
+	</Student>
+</Students>

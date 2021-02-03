@@ -1,0 +1,36 @@
+<?xml version = "1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<xs:element name="Students">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Student" type="StudentType"
+					maxOccurs="unbounded" minOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="StudentType">
+		<xs:sequence>
+			<xs:element name="StudId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[s]{1}\d{9}"></xs:pattern>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Name" type="xs:string" />
+			<xs:element name="Address" type="xs:string" />
+			<xs:element name="Status">
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="Freshman" />
+						<xs:enumeration value="Sophomore" />
+						<xs:enumeration value="Junior" />
+						<xs:enumeration value="Senior" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
